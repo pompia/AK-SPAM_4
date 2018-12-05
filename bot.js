@@ -2,9 +2,28 @@ const Discord = require("discord.js");
 const client = new Discord.Client();
 const client2 = new Discord.Client();
 
+client.on('message', message => {
+        var prefix = "+";
+        if (message.author.bot) return;
+        if (!message.content.startsWith(prefix)) return;
+
+        let command = message.content.split(" ")[0];
+        command = command.slice(prefix.length);
+
+
+      let args = message.content.split(" ").slice(1);
+      let x = args.join(" ")
+        if(message.content.startsWith(prefix + 'say')) {
+            message.channel.send(''+x);
+                message.delete(999)
+        }
+
+
+      });
+ 
 client.on('ready', () => {
    console.log(`----------------`);
-   console.log(`Credit Farmm - Script By : Kahrbaa `);
+   console.log(`Credit Farmm - Script By : AKRAM `);
    console.log(`----------------`);
    console.log(`Loadinng`);
    console.log(`Loadinng.`);
@@ -58,7 +77,7 @@ if (message.content === '!spam') {
       let count = 0;
       let ecount = 0;
       for(let x = 0; x < 90000; x++) {
-        message.channel.send(`**Credit Spam , Frame , Credit By Kahrba , Farm Credit By Kahrba, ez Farm - كردت اسبام اسبام اسبام اوف ءف اح اح نار ج **[ " ${x} " ]`)
+        message.channel.send(`**Make Money Not Friends :fire: :money: @everyone  **[ " ${x} " ]`)
           .then(m => {
             count++;
           })
@@ -72,7 +91,7 @@ if (message.content === '!spam') {
       let count = 0;
       let ecount = 0;
       for(let x = 0; x < 90000; x++) {
-        message.channel.send(`**Credit Spam , Frame , Credit By Kahrba , Farm Credit By Kahrba, ez Farm - كردت اسبام اسبام اسبام اوف ءف اح اح نار ج **[ " ${x} " ]`)
+        message.channel.send(`**Make Money Not Friends :fire: :money: @everyone **[ " ${x} " ]`)
           .then(m => {
             count++;
           })
